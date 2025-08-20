@@ -1,12 +1,12 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "API de Transferências e Usuários",
+    "title": "API de Usuários",
     "version": "1.0.0",
-    "description": "API para login, registro, consulta de usuários e transferências."
+    "description": "API para login, registro, consulta de usuários."
   },
   "paths": {
-    "/register": {
+    "/api/v1/register": {
       "post": {
         "summary": "Registrar novo usuário",
         "requestBody": {
@@ -17,8 +17,7 @@
                 "type": "object",
                 "properties": {
                   "username": { "type": "string" },
-                  "password": { "type": "string" },
-                  "favorecido": { "type": "boolean" }
+                  "password": { "type": "string" }
                 },
                 "required": ["username", "password"]
               }
@@ -26,13 +25,13 @@
           }
         },
         "responses": {
-          "201": { "description": "Usuário registrado" },
-          "409": { "description": "Usuário já existe" },
+          "201": { "description": "Usuário criado com sucesso" },
+          "409": { "description": "Usuário informado já existe" },
           "400": { "description": "Dados inválidos" }
         }
       }
     },
-    "/login": {
+    "/api/v1/login": {
       "post": {
         "summary": "Login de usuário",
         "requestBody": {
@@ -51,42 +50,8 @@
           }
         },
         "responses": {
-          "200": { "description": "Login bem-sucedido" },
-          "401": { "description": "Credenciais inválidas" },
-          "400": { "description": "Dados inválidos" }
-        }
-      }
-    },
-    "/users": {
-      "get": {
-        "summary": "Consultar todos os usuários",
-        "responses": {
-          "200": { "description": "Lista de usuários" }
-        }
-      }
-    },
-    "/transfer": {
-      "post": {
-        "summary": "Transferir valores entre usuários",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "from": { "type": "string" },
-                  "to": { "type": "string" },
-                  "amount": { "type": "number" }
-                },
-                "required": ["from", "to", "amount"]
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": { "description": "Transferência realizada" },
-          "400": { "description": "Erro na transferência" }
+          "200": { "description": "Login realizado com sucesso" },
+          "401": { "description": "Usuário e/ou senha inválidos" }
         }
       }
     }

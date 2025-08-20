@@ -4,11 +4,11 @@ function findUserByUsername(username) {
   return users.find(u => u.username === username);
 }
 
-function registerUser({ username, password, favorecido }) {
+function registerUser({ username, password }) {
   if (findUserByUsername(username)) {
     return { error: 'Usuário já existe.' };
   }
-  const user = { username, password, favorecido: !!favorecido, balance: 0 };
+  const user = { username, password };
   users.push(user);
   return { user };
 }
@@ -21,13 +21,8 @@ function loginUser({ username, password }) {
   return { user };
 }
 
-function getAllUsers() {
-  return users;
-}
-
 module.exports = {
   findUserByUsername,
   registerUser,
-  loginUser,
-  getAllUsers,
+  loginUser
 };
