@@ -69,7 +69,7 @@ Arquivo onde contém anotações do projeto.
 
 - Para rodar os testes
   comando: npx mocha 
-Deve realizar o comando dentro da pasta onde está localizado o arquivo teste.
+Deve realizar o comando dentro da pasta onde está localizado o arquivo .test.js.
 
 
 ## Regras de Negócio
