@@ -65,5 +65,4 @@ describe('Testes registros login usuário', () => {
     expect(res.status.calledWith(400));
     expect(res.json.calledWithMatch({ error: 'Senha deve conter pelo menos um número.' }));
   });
-
 });

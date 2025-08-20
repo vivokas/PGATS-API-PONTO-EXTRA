@@ -44,7 +44,6 @@ Arquivo onde contém anotações do projeto.
 
 
 ## Instalação
-
 1. Realizado a instalação das dependências:
     1.1 Sinon: Biblioteca para mocks, stubs.Permite isolar partes do código, como o Service, para testar só o Controller.
     1.2 Mocha: Framework de testes para Node.js.Estrutura os testes em blocos describe (grupo) e it (casos de teste).

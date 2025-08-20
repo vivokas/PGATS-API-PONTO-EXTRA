@@ -3,7 +3,6 @@ const express = require('express');
 const userService = require('../service/userService');
 
 
-
 exports.register = (req, res) => {
   const { username, password } = req.body;
 

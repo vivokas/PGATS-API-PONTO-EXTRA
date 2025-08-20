@@ -4,6 +4,7 @@
     "title": "API de Usuários",
     "version": "1.0.0",
     "description": "API para login, registro, consulta de usuários."
+    
   },
   "paths": {
     "/api/v1/register": {
