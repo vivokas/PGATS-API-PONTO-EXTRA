@@ -4,7 +4,6 @@
     "title": "API de Usuários",
     "version": "1.0.0",
     "description": "API para login, registro, consulta de usuários."
-    
   },
   "paths": {
     "/api/v1/register": {
@@ -52,9 +51,10 @@
         },
         "responses": {
           "200": { "description": "Login realizado com sucesso" },
-          "401": { "description": "Usuário e/ou senha inválidos" }
+          "401": { "description": "Usuario e/ou senha invpalidos" }
         }
       }
     }
   }
 }
+
